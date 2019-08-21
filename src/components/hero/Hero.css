@@ -1,0 +1,57 @@
+/*-------- Start Banner Area ------------*/
+.banner-area {
+  background: #f9f9ff;
+}
+
+.banner-area .fullscreen {
+  height: 750px !important;
+}
+
+.banner-left h6 {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.banner-left h1 {
+  margin: 20px 0;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .banner-left h1 {
+    font-size: 30px;
+  }
+}
+
+.banner-left .primary-btn:hover {
+  box-shadow: 0px 20px 20px 0px rgba(132, 144, 255, 0.3);
+}
+
+@media (max-width: 767px) {
+  .banner-left {
+    margin-top: 100px;
+  }
+}
+
+.banner-right {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .banner-right {
+    align-self: center !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-right {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/*-------- End Banner Area ------------*/
