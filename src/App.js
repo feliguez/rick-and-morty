@@ -1,8 +1,8 @@
-import React from "react";
-import "./bootstrap.css";
-import "./App.css";
-import Home from "./views/home/Home";
-import Heroes from "./views/heroes/Heroes";
+import React from 'react';
+import './bootstrap.css';
+import './App.css';
+import Home from './views/home/Home';
+import Heroes from './views/heroes/Heroes';
 
 function App() {
   return (

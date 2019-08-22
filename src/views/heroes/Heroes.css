@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heroes {
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.heroes_container {
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.search-input {
+  margin-bottom: 20px;
+}
+
+.search-input input {
+  border-radius: 4px;
+  border: 0;
+  padding: 4px;
+}
+
+.heroes-row td {
+  border-bottom: 1px solid white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.controls div {
+  cursor: pointer;
+}
