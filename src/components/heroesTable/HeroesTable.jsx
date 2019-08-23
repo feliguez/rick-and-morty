@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroeItem from '../heroeItem/HeroItem';
 import { heroes } from './heroes';
+import './HeroesTable.css';
 
 const HeroesTable = () => {
   return (

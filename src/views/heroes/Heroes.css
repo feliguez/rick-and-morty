@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,22 +30,4 @@ body {
   border-radius: 4px;
   border: 0;
   padding: 4px;
-}
-
-.heroes-row td {
-  border-bottom: 1px solid white;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-.controls {
-  display: flex;
-  flex-direction: row;
-  margin: 5px;
-}
-
-.controls div {
-  cursor: pointer;
 }

@@ -1,0 +1,17 @@
+.heroes-row td {
+  border-bottom: 1px solid white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.controls div {
+  cursor: pointer;
+}
