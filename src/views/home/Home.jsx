@@ -1,26 +1,21 @@
-import React, { Component } from "react";
+import React from 'react';
 
-import Header from "../../components/header/Header";
-import Hero from "../../components/hero/Hero";
-import Footer from "../../components/footer/Footer";
+import Header from '../../components/header/Header';
+import Hero from '../../components/hero/Hero';
+import Footer from '../../components/footer/Footer';
 
-import "./Home.css";
+import './Home.css';
 
-class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
+// This view is a demo to create a simple personal presentation
 
-  render() {
-    const { children, unProps } = this.props;
-    return (
-      <>
-        <Header />
-        <Hero />
-        <Footer />
-      </>
-    );
-  }
-}
+const Home = () => {
+  return (
+    <>
+      <Header />
+      <Hero />
+      <Footer />
+    </>
+  );
+};
 
 export default Home;

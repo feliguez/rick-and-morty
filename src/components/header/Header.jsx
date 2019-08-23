@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import "./Header.css";
-import logo from "../../../src/logo.png";
+import './Header.css';
+import logo from '../../../src/logo.png';
 
 const Header = () => {
   return (
@@ -31,7 +31,7 @@ const Header = () => {
                 <a href="price.html">Pricing</a>
               </li>
               <li className="menu-has-children">
-                <a href="">Blog</a>
+                <a href="index.html">Blog</a>
                 <ul>
                   <li>
                     <a href="blog-home.html">Blog Home</a>
@@ -42,19 +42,19 @@ const Header = () => {
                 </ul>
               </li>
               <li className="menu-has-children">
-                <a href="">Pages</a>
+                <a href="index.html">Pages</a>
                 <ul>
                   <li>
                     <a href="elements.html">Elements</a>
                   </li>
                   <li className="menu-has-children">
-                    <a href="">Level 2 </a>
+                    <a href="index.html">Level 2 </a>
                     <ul>
                       <li>
-                        <a href="#">Item One</a>
+                        <a href="index.html">Item One</a>
                       </li>
                       <li>
-                        <a href="#">Item Two</a>
+                        <a href="index.html">Item Two</a>
                       </li>
                     </ul>
                   </li>

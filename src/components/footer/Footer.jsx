@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./Footer.css";
+import './Footer.css';
 
 const Footer = () => {
   return (
@@ -16,9 +16,13 @@ const Footer = () => {
               </p>
               <p class="footer-text">
                 Copyright &copy;{new Date().getFullYear()} All rights reserved |
-                This template is made with{" "}
-                <i class="fa fa-heart-o" aria-hidden="true" /> by{" "}
-                <a href="https://colorlib.com" target="_blank">
+                This template is made with{' '}
+                <i class="fa fa-heart-o" aria-hidden="true" /> by{' '}
+                <a
+                  href="https://colorlib.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Colorlib
                 </a>
               </p>
@@ -58,16 +62,16 @@ const Footer = () => {
               <h4>Follow Me</h4>
               <p>Let us be social</p>
               <div class="footer-social d-flex align-items-center">
-                <a href="#">
+                <a href="index.html">
                   <i class="fa fa-facebook" />
                 </a>
-                <a href="#">
+                <a href="index.html">
                   <i class="fa fa-twitter" />
                 </a>
-                <a href="#">
+                <a href="index.html">
                   <i class="fa fa-dribbble" />
                 </a>
-                <a href="#">
+                <a href="index.html">
                   <i class="fa fa-behance" />
                 </a>
               </div>

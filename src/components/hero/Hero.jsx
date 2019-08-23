@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import "./Hero.css";
-import imgMe from "./frodriguez.jpg";
+import './Hero.css';
+import imgMe from './frodriguez.jpg';
 
 const Hero = () => {
   return (
@@ -16,7 +16,7 @@ const Hero = () => {
               Pattern with reference to the ghost showing Scrooge some different
               futures.
             </p>
-            <a href="#" className="primary-btn text-uppercase">
+            <a href="index.html" className="primary-btn text-uppercase">
               discover now
             </a>
           </div>
