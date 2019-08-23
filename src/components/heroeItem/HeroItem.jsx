@@ -1,7 +1,7 @@
 import React from 'react';
 
-const HeroeItem = props => {
-  const { name, race, age, weapon } = props;
+const HeroeItem = ({ data }) => {
+  const { name, race, age, weapon } = data;
   return (
     <tr className="heroes-row">
       <td>{name}</td>

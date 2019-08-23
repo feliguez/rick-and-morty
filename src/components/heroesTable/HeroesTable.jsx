@@ -1,6 +1,6 @@
 import React from 'react';
+import { heroes } from '../../services/hero.services';
 import HeroeItem from '../heroeItem/HeroItem';
-import { heroes } from './heroes';
 import './HeroesTable.css';
 
 const HeroesTable = () => {
@@ -14,16 +14,8 @@ const HeroesTable = () => {
           <th>Arma</th>
           <th>acción</th>
         </tr>
-        {heroes.map(e => {
-          return (
-            <HeroeItem
-              key={e.name}
-              name={e.name}
-              race={e.race}
-              age={e.age}
-              weapon={e.weapon}
-            />
-          );
+        {heroes.map((hero, i) => {
+          return <HeroeItem key={i} data={hero} />;
         })}
       </tbody>
     </table>
