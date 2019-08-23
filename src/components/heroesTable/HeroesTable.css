@@ -1,5 +1,7 @@
-.heroes-row td {
+.heroes-row td,
+.heroes-row th {
   border-bottom: 1px solid white;
+  padding: 4px;
 }
 
 table {
@@ -8,7 +10,6 @@ table {
 
 .controls {
   display: flex;
-  flex-direction: row;
   margin: 5px;
 }
 

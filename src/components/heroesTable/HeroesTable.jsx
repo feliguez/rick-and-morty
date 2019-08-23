@@ -1,24 +1,29 @@
 import React from 'react';
 import { heroes } from '../../services/hero.services';
-import HeroeItem from '../heroeItem/HeroItem';
+import HeroeItem from '../heroeItem/HeroeItem';
+import Table from '../table/Table';
+import Tbody from '../table/Tbody';
+import Th from '../table/Th';
+import Tr from '../table/Tr';
+
 import './HeroesTable.css';
 
 const HeroesTable = () => {
   return (
-    <table className="heroes-table">
-      <tbody>
-        <tr className="heroes-row">
-          <th>Nombre</th>
-          <th>Raza</th>
-          <th>Edad</th>
-          <th>Arma</th>
-          <th>acción</th>
-        </tr>
+    <Table>
+      <Tbody>
+        <Tr>
+          <Th>Nombre</Th>
+          <Th>Raza</Th>
+          <Th>Edad</Th>
+          <Th>Arma</Th>
+          <Th>acción</Th>
+        </Tr>
         {heroes.map((hero, i) => {
           return <HeroeItem key={i} data={hero} />;
         })}
-      </tbody>
-    </table>
+      </Tbody>
+    </Table>
   );
 };
 
