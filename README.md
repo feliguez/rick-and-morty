@@ -1,5 +1,4 @@
-## This branch transform a basic html table template into React components
-
+## This branch adds two new methods to kill heroes and use ring
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
