@@ -8,8 +8,9 @@ import Tr from '../table/Tr';
 import './HeroesTable.css';
 
 const HeroesTable = () => {
-  const data = useContext(Context);
-  const { heroesList, isRingUsed } = data;
+  const state = useContext(Context);
+  const { heroesList, isRingUsed } = state;
+
   return (
     <Table isRingUsed={isRingUsed}>
       <Tbody>
@@ -30,7 +31,7 @@ const HeroesTable = () => {
               <Td>
                 <div className="controls">
                   <div>
-                    <button onClick={() => data.handleKill(i)}>
+                    <button onClick={() => state.handleKill(i)}>
                       {hero.isKill ? (
                         ' Restaurar'
                       ) : (
@@ -43,7 +44,7 @@ const HeroesTable = () => {
                   <div>
                     {!hero.isKill && (
                       <button
-                        onClick={() => data.handleRing(i)}
+                        onClick={() => state.handleRing(i)}
                         disabled={isRingUsed}
                       >
                         <span role="img" aria-label="ring">
