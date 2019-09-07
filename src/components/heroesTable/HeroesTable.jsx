@@ -13,7 +13,7 @@ const HeroesTable = () => {
 
   return (
     <Table isRingUsed={isRingUsed}>
-      <Tbody>
+      <thead className="thead-light">
         <Tr>
           <Th>Nombre</Th>
           <Th>Raza</Th>
@@ -21,6 +21,8 @@ const HeroesTable = () => {
           <Th>Arma</Th>
           <Th>acción</Th>
         </Tr>
+      </thead>
+      <Tbody>
         {heroesList.map((hero, i) => {
           return (
             <Tr key={i} isKill={hero.isKill} useRing={hero.useRing}>
@@ -30,30 +32,34 @@ const HeroesTable = () => {
               <Td>{hero.weapon}</Td>
               <Td>
                 <div className="controls">
-                  <div>
-                    <button onClick={() => state.handleKill(i)}>
-                      {hero.isKill ? (
-                        ' Restaurar'
-                      ) : (
-                        <span role="img" aria-label="skull">
-                          ☠ {'Eliminar'}
-                        </span>
-                      )}
+                  {!hero.isKill && (
+                    <button
+                      onClick={() => state.handleRing(i)}
+                      disabled={isRingUsed}
+                      className="btn btn-outline-primary"
+                    >
+                      <span role="img" aria-label="ring">
+                        💍
+                      </span>{' '}
+                      Usar
                     </button>
-                  </div>
-                  <div>
-                    {!hero.isKill && (
-                      <button
-                        onClick={() => state.handleRing(i)}
-                        disabled={isRingUsed}
-                      >
-                        <span role="img" aria-label="ring">
-                          💍
-                        </span>{' '}
-                        Usar el anillo
-                      </button>
+                  )}
+                  <button
+                    onClick={() => state.handleKill(i)}
+                    className={`btn ${
+                      !hero.isKill
+                        ? 'btn-outline-danger'
+                        : 'btn-outline-success'
+                    }`}
+                  >
+                    {hero.isKill ? (
+                      ' Restaurar'
+                    ) : (
+                      <span role="img" aria-label="skull">
+                        ☠ {'Eliminar'}
+                      </span>
                     )}
-                  </div>
+                  </button>
                 </div>
               </Td>
             </Tr>
