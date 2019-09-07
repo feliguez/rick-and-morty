@@ -1,4 +1,4 @@
-## This branch adds two new methods to kill heroes and use ring
+## This branch adds a Form to add new heroes using Hooks useState and useContext. It also redesigns the proyect
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
