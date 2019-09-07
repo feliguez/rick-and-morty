@@ -43,7 +43,7 @@ const Form = () => {
             type="text"
             name="name"
             className="form-control"
-            placeholder="Nombre"
+            placeholder="Sam"
           />
         </div>
         <div className="col-6 col-sm-2">
@@ -56,7 +56,7 @@ const Form = () => {
             type="text"
             name="race"
             className="form-control"
-            placeholder="Humano"
+            placeholder="Hobbit"
           />
         </div>
         <div className="col-6 col-sm-2">
@@ -69,7 +69,7 @@ const Form = () => {
             type="number"
             name="age"
             className="form-control"
-            placeholder="40"
+            placeholder="30"
           />
         </div>
         <div className="col-6 col-sm-2">
@@ -82,7 +82,7 @@ const Form = () => {
             type="text"
             name="weapon"
             className="form-control"
-            placeholder="Flechas"
+            placeholder="Puño"
           />
         </div>
         <div className="col-sm-2">

@@ -3,31 +3,31 @@ export const heroes = [
     name: 'Gandalf',
     race: 'Maia',
     age: '2019',
-    weapon: 'Staff 🏑',
+    weapon: 'Bastón 🏑',
     isKill: false,
     useRing: false
   },
   {
     name: 'Aragorn',
-    race: 'Human',
+    race: 'Humano',
     age: '120',
-    weapon: 'Sword ⚔',
+    weapon: 'Espada ⚔',
     isKill: false,
     useRing: false
   },
   {
     name: 'Legolas',
-    race: 'Elf',
+    race: 'Elfo',
     age: '200',
-    weapon: 'Bow 🏹',
+    weapon: 'Arco 🏹',
     isKill: false,
     useRing: false
   },
   {
     name: 'Gimli',
-    race: 'Dwarf',
+    race: 'Enano',
     age: '139',
-    weapon: 'Axe ⚒',
+    weapon: 'Hacha ⚒',
     isKill: false,
     useRing: false
   },
@@ -35,7 +35,7 @@ export const heroes = [
     name: 'Frodo',
     race: 'Hobbit',
     age: '33',
-    weapon: 'Dagger 🗡',
+    weapon: 'Daga 🗡',
     isKill: false,
     useRing: false
   }
