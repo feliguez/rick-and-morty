@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import Form from '../../components/form/Form';
 import HeroesTable from '../../components/heroesTable/HeroesTable';
 import Title from '../../components/title/Title';
 import Context from '../../Context';
 import { heroes } from '../../services/hero.services';
+
 import './Heroes.css';
 
 const Heroes = () => {
@@ -28,6 +30,7 @@ const Heroes = () => {
 
   const state = {
     heroesList,
+    setHeroesList,
     isRingUsed,
     handleKill,
     handleRing
@@ -35,12 +38,13 @@ const Heroes = () => {
 
   return (
     <Context.Provider value={state}>
-      <div className="heroes">
+      <div className="container heroes">
         <Title>La Comunidad del Anillo</Title>
-        <div className="heroes_container">
-          <div className="search-input">
+        <div className="heroes--container">
+          {/* <div className="search-input">
             <input type="text" placeholder="Buscar héroe" />
-          </div>
+          </div> */}
+          <Form />
           <HeroesTable />
         </div>
       </div>
