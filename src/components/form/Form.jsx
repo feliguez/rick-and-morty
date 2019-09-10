@@ -3,6 +3,10 @@ import Context from '../../Context';
 
 import './Form.css';
 
+const isDisabled = (name, race, age, weapon) => {
+  return name === '' || race === '' || age === '' || age <= 0 || weapon === '';
+};
+
 const Form = () => {
   const state = useContext(Context);
   const { heroesList, setHeroesList } = state;
@@ -20,7 +24,6 @@ const Form = () => {
     // const value = event.target.value;
     const { name, value } = event.target;
     setNewUser({ ...newUser, [name]: value });
-    console.log(newUser);
   };
 
   const handleSubmitHeroe = event => {
@@ -28,6 +31,14 @@ const Form = () => {
     let newHeroesList = heroesList.slice();
     newHeroesList = newHeroesList.concat(newUser);
     setHeroesList(newHeroesList);
+    setNewUser({
+      name: '',
+      race: '',
+      age: 0,
+      weapon: '',
+      isKill: false,
+      useRing: false
+    });
   };
 
   return (
@@ -86,7 +97,17 @@ const Form = () => {
           />
         </div>
         <div className="col-sm-2">
-          <input type="submit" value="Agregar" className="btn btn-primary" />
+          <button
+            className="btn btn-primary"
+            disabled={isDisabled(
+              newUser.name,
+              newUser.race,
+              newUser.age,
+              newUser.weapon
+            )}
+          >
+            Agregar
+          </button>
         </div>
       </div>
     </form>
