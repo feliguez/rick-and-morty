@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import Context from '../../Context';
 
 import './Form.css';
@@ -9,37 +9,7 @@ const isDisabled = (name, race, age, weapon) => {
 
 const Form = () => {
   const state = useContext(Context);
-  const { heroesList, setHeroesList } = state;
-  const [newUser, setNewUser] = useState({
-    name: '',
-    race: '',
-    age: undefined,
-    weapon: '',
-    isKill: false,
-    useRing: false
-  });
-
-  const handleOnChangeInput = event => {
-    // const name = event.target.name;
-    // const value = event.target.value;
-    const { name, value } = event.target;
-    setNewUser({ ...newUser, [name]: value });
-  };
-
-  const handleSubmitHeroe = event => {
-    event.preventDefault();
-    let newHeroesList = heroesList.slice();
-    newHeroesList = newHeroesList.concat(newUser);
-    setHeroesList(newHeroesList);
-    setNewUser({
-      name: '',
-      race: '',
-      age: 0,
-      weapon: '',
-      isKill: false,
-      useRing: false
-    });
-  };
+  const { handleSubmitHeroe, handleOnChangeInput, newUser } = state;
 
   return (
     <form onSubmit={handleSubmitHeroe} className="heroes--form">
@@ -98,7 +68,7 @@ const Form = () => {
         </div>
         <div className="col-sm-2">
           <button
-            className="btn btn-primary"
+            className="btn btn-primary button-remove"
             disabled={isDisabled(
               newUser.name,
               newUser.race,
