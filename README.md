@@ -1,4 +1,4 @@
-## This branch adds a Form to add new heroes using Hooks useState and useContext. It also redesigns the proyect
+## This branch create a CRUD heroes list using Hooks useState and useContext.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

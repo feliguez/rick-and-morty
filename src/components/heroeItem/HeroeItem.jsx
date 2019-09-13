@@ -10,7 +10,6 @@ const HeroeItem = ({ heroe, heroeIndex }) => {
     isRingUsed,
     handleEdit,
     handleRing,
-    handleKill,
     handleRemove,
     handleUpdateHeroe
   } = state;
@@ -122,20 +121,6 @@ const HeroeItem = ({ heroe, heroeIndex }) => {
               Editar
             </button>
           )}
-          <button
-            onClick={() => handleKill(heroeIndex)}
-            className={`btn ${
-              !heroe.isKill ? 'btn-outline-dark' : 'btn-outline-success'
-            }`}
-          >
-            {heroe.isKill ? (
-              ' Restaurar'
-            ) : (
-              <span role="img" aria-label="basket">
-                🗑️ {'Eliminar'}
-              </span>
-            )}
-          </button>
           <button
             onClick={() => handleRemove(heroeIndex)}
             className="btn btn-outline-danger"
