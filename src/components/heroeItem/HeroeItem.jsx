@@ -1,5 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Context from '../../Context';
+import HeroeControl from '../heroeControl/HeroeControl';
 import Td from '../table/Td';
 import Tr from '../table/Tr';
 import './HeroeItem.css';
@@ -87,49 +88,16 @@ const HeroeItem = ({ heroe, heroeIndex }) => {
         </>
       )}
       <Td>
-        <div className="controls">
-          {!heroe.isKill && (
-            <button
-              onClick={() => handleRing(heroeIndex)}
-              disabled={isRingUsed}
-              className="btn btn-outline-primary"
-            >
-              <span role="img" aria-label="ring">
-                💍
-              </span>{' '}
-              Usar
-            </button>
-          )}
-          {heroe.editing ? (
-            <button
-              onClick={() => handleUpdateHeroe(updateHeroe)}
-              className="btn btn-outline-success"
-            >
-              <span role="img" aria-label="pencil">
-                💾
-              </span>{' '}
-              Guardar
-            </button>
-          ) : (
-            <button
-              onClick={() => handleEdit(heroeIndex)}
-              className="btn btn-outline-secondary"
-            >
-              <span role="img" aria-label="pencil">
-                ✏️
-              </span>{' '}
-              Editar
-            </button>
-          )}
-          <button
-            onClick={() => handleRemove(heroeIndex)}
-            className="btn btn-outline-danger"
-          >
-            <span role="img" aria-label="skull">
-              ☠ {'Remover'}
-            </span>
-          </button>
-        </div>
+        <HeroeControl
+          handleEdit={handleEdit}
+          handleRemove={handleRemove}
+          handleRing={handleRing}
+          handleUpdateHeroe={handleUpdateHeroe}
+          heroe={heroe}
+          heroeIndex={heroeIndex}
+          isRingUsed={isRingUsed}
+          updateHeroe={updateHeroe}
+        />
       </Td>
     </Tr>
   );
