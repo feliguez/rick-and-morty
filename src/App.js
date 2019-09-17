@@ -10,7 +10,6 @@ const App = () => {
     <Provider store={store}>
       <div className="App">
         <Heroes />
-        {console.log(store.getState())}
       </div>
     </Provider>
   );

@@ -5,15 +5,15 @@ import Td from '../table/Td';
 import Tr from '../table/Tr';
 import './HeroeItem.css';
 
-const HeroeItem = ({ heroe, heroeIndex }) => {
+const HeroeItem = ({
+  heroe,
+  heroeIndex,
+  removeHeroe,
+  ringHeroe,
+  isRingUsed
+}) => {
   const state = useContext(Context);
-  const {
-    isRingUsed,
-    handleEdit,
-    handleRing,
-    handleRemove,
-    handleUpdateHeroe
-  } = state;
+  const { handleEdit, handleRing, handleRemove, handleUpdateHeroe } = state;
 
   const [updateHeroe, setUpdateHeroe] = useState({
     id: heroe.id,
@@ -97,6 +97,8 @@ const HeroeItem = ({ heroe, heroeIndex }) => {
           heroeIndex={heroeIndex}
           isRingUsed={isRingUsed}
           updateHeroe={updateHeroe}
+          removeHeroe={removeHeroe}
+          ringHeroe={ringHeroe}
         />
       </Td>
     </Tr>

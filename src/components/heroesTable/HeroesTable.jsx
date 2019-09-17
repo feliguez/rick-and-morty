@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import Context from '../../Context';
+import React from 'react';
 import HeroeItem from '../heroeItem/HeroeItem';
 import Table from '../table/Table';
 import Tbody from '../table/Tbody';
@@ -7,10 +6,7 @@ import Th from '../table/Th';
 import Tr from '../table/Tr';
 import './HeroesTable.css';
 
-const HeroesTable = () => {
-  const state = useContext(Context);
-  const { isRingUsed, heroesList } = state;
-
+const HeroesTable = ({ isRingUsed, heroes, removeHeroe, ringHeroe }) => {
   return (
     <Table isRingUsed={isRingUsed}>
       <thead className="thead-light">
@@ -24,8 +20,15 @@ const HeroesTable = () => {
         </Tr>
       </thead>
       <Tbody>
-        {heroesList.map((heroe, i) => (
-          <HeroeItem heroe={heroe} key={i} heroeIndex={i} />
+        {heroes.map((heroe, i) => (
+          <HeroeItem
+            heroe={heroe}
+            key={i}
+            heroeIndex={i}
+            removeHeroe={removeHeroe}
+            ringHeroe={ringHeroe}
+            isRingUsed={isRingUsed}
+          />
         ))}
       </Tbody>
     </Table>

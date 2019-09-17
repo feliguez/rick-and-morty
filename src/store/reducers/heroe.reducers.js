@@ -6,10 +6,12 @@ import {
   HEROE_COUNTER
 } from '../actionTypes';
 
+import { heroes } from '../../services/heroe.services';
+
 const initialState = {
   isRingUsed: false,
   counter: 1,
-  heroes: []
+  heroes: heroes
 };
 
 const heroeReducers = (state = initialState, action) => {
@@ -17,7 +19,12 @@ const heroeReducers = (state = initialState, action) => {
     case HEROE_RING:
       return {
         ...state,
-        isRingUsed: true
+        isRingUsed: !state.isRingUsed,
+        heroes: state.heroes.map(heroe => {
+          const isCurrentTodo = heroe.id === action.payload.id;
+          // si es el elemento que requerimos, cambiamos el estado
+          return isCurrentTodo ? { ...heroe, useRing: true } : heroe;
+        })
       };
     case HEROE_ADD:
       return {

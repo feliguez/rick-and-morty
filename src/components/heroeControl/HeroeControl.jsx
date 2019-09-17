@@ -8,12 +8,14 @@ const HeroeControl = ({
   heroe,
   heroeIndex,
   isRingUsed,
-  updateHeroe
+  updateHeroe,
+  removeHeroe,
+  ringHeroe
 }) => (
   <div className="controls">
     {!heroe.isKill && (
       <button
-        onClick={() => handleRing(heroeIndex)}
+        onClick={() => ringHeroe(heroe)}
         disabled={isRingUsed}
         className="btn btn-outline-primary"
       >
@@ -45,7 +47,7 @@ const HeroeControl = ({
       </button>
     )}
     <button
-      onClick={() => handleRemove(heroeIndex)}
+      onClick={() => removeHeroe(heroe)}
       className="btn btn-outline-danger"
     >
       <span role="img" aria-label="skull">
