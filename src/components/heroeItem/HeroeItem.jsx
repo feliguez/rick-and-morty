@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import Context from '../../Context';
+import React, { useState } from 'react';
 import HeroeControl from '../heroeControl/HeroeControl';
 import Td from '../table/Td';
 import Tr from '../table/Tr';
@@ -10,12 +9,11 @@ const HeroeItem = ({
   heroeIndex,
   removeHeroe,
   ringHeroe,
-  isRingUsed
+  isRingUsed,
+  editHeroe,
+  updateHeroe
 }) => {
-  const state = useContext(Context);
-  const { handleEdit, handleRing, handleRemove, handleUpdateHeroe } = state;
-
-  const [updateHeroe, setUpdateHeroe] = useState({
+  const [updatedHeroe, setUpdatedHeroe] = useState({
     id: heroe.id,
     name: heroe.name,
     race: heroe.race,
@@ -29,7 +27,7 @@ const HeroeItem = ({
     // const name = event.target.name;
     // const value = event.target.value;
     const { name, value } = event.target;
-    setUpdateHeroe({ ...updateHeroe, [name]: value });
+    setUpdatedHeroe({ ...updatedHeroe, [name]: value });
   };
 
   return (
@@ -40,7 +38,7 @@ const HeroeItem = ({
           <Td>
             <input
               onChange={handleOnChangeInput}
-              value={updateHeroe.name}
+              value={updatedHeroe.name}
               type="text"
               name="name"
               className="form-control"
@@ -50,7 +48,7 @@ const HeroeItem = ({
           <Td>
             <input
               onChange={handleOnChangeInput}
-              value={updateHeroe.race}
+              value={updatedHeroe.race}
               type="text"
               name="race"
               className="form-control"
@@ -60,7 +58,7 @@ const HeroeItem = ({
           <Td>
             <input
               onChange={handleOnChangeInput}
-              value={updateHeroe.age}
+              value={updatedHeroe.age}
               type="number"
               name="age"
               className="form-control"
@@ -70,7 +68,7 @@ const HeroeItem = ({
           <Td>
             <input
               onChange={handleOnChangeInput}
-              value={updateHeroe.weapon}
+              value={updatedHeroe.weapon}
               type="text"
               name="weapon"
               className="form-control"
@@ -89,16 +87,14 @@ const HeroeItem = ({
       )}
       <Td>
         <HeroeControl
-          handleEdit={handleEdit}
-          handleRemove={handleRemove}
-          handleRing={handleRing}
-          handleUpdateHeroe={handleUpdateHeroe}
           heroe={heroe}
           heroeIndex={heroeIndex}
           isRingUsed={isRingUsed}
           updateHeroe={updateHeroe}
+          updatedHeroe={updatedHeroe}
           removeHeroe={removeHeroe}
           ringHeroe={ringHeroe}
+          editHeroe={editHeroe}
         />
       </Td>
     </Tr>

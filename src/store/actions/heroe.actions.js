@@ -3,7 +3,8 @@ import {
   HEROE_ADD,
   HEROE_REMOVE,
   HEROE_UPDATE,
-  HEROE_COUNTER
+  HEROE_COUNTER,
+  HEROE_EDIT
 } from '../actionTypes';
 
 export const ringHeroe = heroes => {
@@ -30,6 +31,13 @@ export const removeHeroe = heroes => {
 export const updateHeroe = heroes => {
   return {
     type: HEROE_UPDATE,
+    payload: heroes
+  };
+};
+
+export const editHeroe = heroes => {
+  return {
+    type: HEROE_EDIT,
     payload: heroes
   };
 };

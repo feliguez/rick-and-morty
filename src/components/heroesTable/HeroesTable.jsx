@@ -6,7 +6,14 @@ import Th from '../table/Th';
 import Tr from '../table/Tr';
 import './HeroesTable.css';
 
-const HeroesTable = ({ isRingUsed, heroes, removeHeroe, ringHeroe }) => {
+const HeroesTable = ({
+  isRingUsed,
+  heroes,
+  removeHeroe,
+  ringHeroe,
+  editHeroe,
+  updateHeroe
+}) => {
   return (
     <Table isRingUsed={isRingUsed}>
       <thead className="thead-light">
@@ -28,6 +35,8 @@ const HeroesTable = ({ isRingUsed, heroes, removeHeroe, ringHeroe }) => {
             removeHeroe={removeHeroe}
             ringHeroe={ringHeroe}
             isRingUsed={isRingUsed}
+            editHeroe={editHeroe}
+            updateHeroe={updateHeroe}
           />
         ))}
       </Tbody>

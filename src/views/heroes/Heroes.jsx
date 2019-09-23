@@ -7,7 +7,9 @@ import Title from '../../components/title/Title';
 import {
   ringHeroe,
   removeHeroe,
-  addHeroe
+  addHeroe,
+  editHeroe,
+  updateHeroe
 } from '../../store/actions/heroe.actions';
 
 import './Heroes.css';
@@ -19,46 +21,10 @@ const Heroes = props => {
     removeHeroe,
     heroes,
     addHeroe,
-    counter
+    counter,
+    editHeroe,
+    updateHeroe
   } = props;
-
-  // const handleEdit = i => {
-  //   let newHeroesList = heroesList.map((heroe, index) => {
-  //     if (index === i) {
-  //       heroe.editing = !heroe.editing;
-  //     }
-  //     return heroe;
-  //   });
-  //   setHeroesList(newHeroesList);
-  // };
-
-  // const handleSubmitHeroe = event => {
-  //   event.preventDefault();
-  //   let newHeroesList = heroesList.slice();
-  //   newHeroesList = newHeroesList.concat(newUser);
-  //   setCounter(counter + 1);
-  //   setNewUser({
-  //     id: counter + 1,
-  //     name: '',
-  //     race: '',
-  //     age: 0,
-  //     weapon: '',
-  //     isKill: false,
-  //     useRing: false
-  //   });
-  //   setHeroesList(newHeroesList);
-  // };
-
-  // const handleUpdateHeroe = updatedHeroe => {
-  //   const newHeroesList = heroesList.map(heroe => {
-  //     if (heroe.id === updatedHeroe.id) {
-  //       heroe.editing = !heroe.editing;
-  //       return updatedHeroe;
-  //     }
-  //     return heroe;
-  //   });
-  //   setHeroesList(newHeroesList);
-  // };
 
   return (
     <div className="container heroes">
@@ -73,6 +39,8 @@ const Heroes = props => {
           ringHeroe={ringHeroe}
           removeHeroe={removeHeroe}
           isRingUsed={isRingUsed}
+          editHeroe={editHeroe}
+          updateHeroe={updateHeroe}
         />
       </div>
     </div>
@@ -92,7 +60,9 @@ const mapDispatchToProps = dispatch => {
     ringHeroe: heroes => {
       dispatch(ringHeroe(heroes));
     },
-    removeHeroe: heroes => dispatch(removeHeroe(heroes))
+    removeHeroe: heroes => dispatch(removeHeroe(heroes)),
+    editHeroe: heroes => dispatch(editHeroe(heroes)),
+    updateHeroe: heroes => dispatch(updateHeroe(heroes))
   };
 };
 

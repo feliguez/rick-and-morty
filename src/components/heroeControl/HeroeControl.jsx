@@ -1,14 +1,11 @@
 import React from 'react';
 
 const HeroeControl = ({
-  handleEdit,
-  handleRemove,
-  handleRing,
-  handleUpdateHeroe,
-  heroe,
-  heroeIndex,
-  isRingUsed,
   updateHeroe,
+  updatedHeroe,
+  heroe,
+  isRingUsed,
+  editHeroe,
   removeHeroe,
   ringHeroe
 }) => (
@@ -27,7 +24,7 @@ const HeroeControl = ({
     )}
     {heroe.editing ? (
       <button
-        onClick={() => handleUpdateHeroe(updateHeroe)}
+        onClick={() => updateHeroe(updatedHeroe)}
         className="btn btn-outline-success"
       >
         <span role="img" aria-label="pencil">
@@ -37,7 +34,7 @@ const HeroeControl = ({
       </button>
     ) : (
       <button
-        onClick={() => handleEdit(heroeIndex)}
+        onClick={() => editHeroe(heroe)}
         className="btn btn-outline-secondary"
       >
         <span role="img" aria-label="pencil">
