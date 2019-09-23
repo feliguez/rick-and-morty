@@ -4,36 +4,23 @@ import Form from '../../components/form/Form';
 import HeroesTable from '../../components/heroesTable/HeroesTable';
 import Title from '../../components/title/Title';
 
-import { ringHeroe, removeHeroe } from '../../store/actions/heroe.actions';
+import {
+  ringHeroe,
+  removeHeroe,
+  addHeroe
+} from '../../store/actions/heroe.actions';
 
 import './Heroes.css';
 
 const Heroes = props => {
-  const { isRingUsed, ringHeroe, removeHeroe, heroes } = props;
-
-  // const [newUser, setNewUser] = useState({
-  //   id: counter,
-  //   name: '',
-  //   race: '',
-  //   age: undefined,
-  //   weapon: '',
-  //   isKill: false,
-  //   useRing: false,
-  //   editing: false
-  // });
-
-  // const handleKill = i => {
-  //   let newHeroesList = heroesList.map((heroe, index) => {
-  //     if (index === i) {
-  //       heroe.isKill = !heroe.isKill;
-  //     }
-  //     return heroe;
-  //   });
-  //   const selected = newHeroesList.splice(i, 1); // elimina un elemento por posición del índice
-  //   newHeroesList = newHeroesList.concat(selected); // une un array con otro
-
-  //   setHeroesList(newHeroesList);
-  // };
+  const {
+    isRingUsed,
+    ringHeroe,
+    removeHeroe,
+    heroes,
+    addHeroe,
+    counter
+  } = props;
 
   // const handleEdit = i => {
   //   let newHeroesList = heroesList.map((heroe, index) => {
@@ -43,13 +30,6 @@ const Heroes = props => {
   //     return heroe;
   //   });
   //   setHeroesList(newHeroesList);
-  // };
-
-  // const handleOnChangeInput = event => {
-  //   // const name = event.target.name;
-  //   // const value = event.target.value;
-  //   const { name, value } = event.target;
-  //   setNewUser({ ...newUser, [name]: value });
   // };
 
   // const handleSubmitHeroe = event => {
@@ -87,7 +67,7 @@ const Heroes = props => {
         {/* <div className="search-input">
             <input type="text" placeholder="Buscar héroe" />
           </div> */}
-        {/* <Form addHeroe={addHeroe} /> */}
+        <Form counter={counter} addHeroe={addHeroe} />
         <HeroesTable
           heroes={heroes}
           ringHeroe={ringHeroe}
@@ -103,12 +83,12 @@ const mapStatetoProps = state => state.heroes;
 
 const mapDispatchToProps = dispatch => {
   return {
-    // addHeroe: heroes => {
-    //   batch(() => {
-    //     dispatch(increaseCounter());
-    //     dispatch(addHeroe(heroes));
-    //   });
-    // },
+    addHeroe: heroes => {
+      batch(() => {
+        dispatch(addHeroe(heroes));
+        // dispatch(increaseCounter());
+      });
+    },
     ringHeroe: heroes => {
       dispatch(ringHeroe(heroes));
     },

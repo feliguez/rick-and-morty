@@ -10,7 +10,7 @@ import { heroes } from '../../services/heroe.services';
 
 const initialState = {
   isRingUsed: false,
-  counter: 1,
+  counter: heroes.length + 1,
   heroes: heroes
 };
 
@@ -29,6 +29,7 @@ const heroeReducers = (state = initialState, action) => {
     case HEROE_ADD:
       return {
         ...state,
+        counter: state.counter + 1,
         heroes: state.heroes.concat([action.payload])
       };
     case HEROE_REMOVE:

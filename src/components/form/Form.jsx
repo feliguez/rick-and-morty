@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import Context from '../../Context';
+import React, { useState } from 'react';
 
 import './Form.css';
 
@@ -7,12 +6,41 @@ const isDisabled = (name, race, age, weapon) => {
   return name === '' || race === '' || age === '' || age <= 0 || weapon === '';
 };
 
-const Form = () => {
-  const state = useContext(Context);
-  const { handleSubmitHeroe, handleOnChangeInput, newUser } = state;
+const Form = ({ counter, addHeroe }) => {
+  const handleOnChangeInput = event => {
+    // const name = event.target.name;
+    // const value = event.target.value;
+    const { name, value } = event.target;
+    setNewUser({ ...newUser, [name]: value });
+  };
+
+  const handleSubmit = (e, newUser) => {
+    e.preventDefault();
+    addHeroe(newUser);
+    setNewUser({
+      id: counter + 1,
+      name: '',
+      race: '',
+      age: 0,
+      weapon: '',
+      isKill: false,
+      useRing: false
+    });
+  };
+
+  const [newUser, setNewUser] = useState({
+    id: counter,
+    name: '',
+    race: '',
+    age: undefined,
+    weapon: '',
+    isKill: false,
+    useRing: false,
+    editing: false
+  });
 
   return (
-    <form onSubmit={handleSubmitHeroe} className="heroes--form">
+    <form onSubmit={e => handleSubmit(e, newUser)} className="heroes--form">
       <div className="form-group row align-items-end">
         <div className="col-6 col-sm-4">
           <label htmlFor="name" className="col-form-label">
