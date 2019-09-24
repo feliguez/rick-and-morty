@@ -5,12 +5,11 @@ import Tr from '../table/Tr';
 import './HeroeItem.css';
 
 const HeroeItem = ({
+  editHeroe,
   heroe,
-  heroeIndex,
+  isRingUsed,
   removeHeroe,
   ringHeroe,
-  isRingUsed,
-  editHeroe,
   updateHeroe
 }) => {
   const [updatedHeroe, setUpdatedHeroe] = useState({
@@ -87,14 +86,13 @@ const HeroeItem = ({
       )}
       <Td>
         <HeroeControl
+          editHeroe={editHeroe}
           heroe={heroe}
-          heroeIndex={heroeIndex}
           isRingUsed={isRingUsed}
-          updateHeroe={updateHeroe}
-          updatedHeroe={updatedHeroe}
           removeHeroe={removeHeroe}
           ringHeroe={ringHeroe}
-          editHeroe={editHeroe}
+          updatedHeroe={updatedHeroe}
+          updateHeroe={updateHeroe}
         />
       </Td>
     </Tr>

@@ -1,13 +1,13 @@
 import React from 'react';
 
 const HeroeControl = ({
-  updateHeroe,
-  updatedHeroe,
+  editHeroe,
   heroe,
   isRingUsed,
-  editHeroe,
   removeHeroe,
-  ringHeroe
+  ringHeroe,
+  updatedHeroe,
+  updateHeroe
 }) => (
   <div className="controls">
     {!heroe.isKill && (

@@ -16,13 +16,13 @@ import './Heroes.css';
 
 const Heroes = props => {
   const {
-    isRingUsed,
-    ringHeroe,
-    removeHeroe,
-    heroes,
     addHeroe,
     counter,
     editHeroe,
+    heroes,
+    isRingUsed,
+    removeHeroe,
+    ringHeroe,
     updateHeroe
   } = props;
 
@@ -33,13 +33,13 @@ const Heroes = props => {
         {/* <div className="search-input">
             <input type="text" placeholder="Buscar héroe" />
           </div> */}
-        <Form counter={counter} addHeroe={addHeroe} />
+        <Form addHeroe={addHeroe} counter={counter} />
         <HeroesTable
-          heroes={heroes}
-          ringHeroe={ringHeroe}
-          removeHeroe={removeHeroe}
-          isRingUsed={isRingUsed}
           editHeroe={editHeroe}
+          heroes={heroes}
+          isRingUsed={isRingUsed}
+          removeHeroe={removeHeroe}
+          ringHeroe={ringHeroe}
           updateHeroe={updateHeroe}
         />
       </div>

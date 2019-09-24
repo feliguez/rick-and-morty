@@ -7,11 +7,11 @@ import Tr from '../table/Tr';
 import './HeroesTable.css';
 
 const HeroesTable = ({
-  isRingUsed,
+  editHeroe,
   heroes,
+  isRingUsed,
   removeHeroe,
   ringHeroe,
-  editHeroe,
   updateHeroe
 }) => {
   return (
@@ -29,13 +29,13 @@ const HeroesTable = ({
       <Tbody>
         {heroes.map((heroe, i) => (
           <HeroeItem
+            editHeroe={editHeroe}
             heroe={heroe}
-            key={i}
             heroeIndex={i}
+            isRingUsed={isRingUsed}
+            key={i}
             removeHeroe={removeHeroe}
             ringHeroe={ringHeroe}
-            isRingUsed={isRingUsed}
-            editHeroe={editHeroe}
             updateHeroe={updateHeroe}
           />
         ))}

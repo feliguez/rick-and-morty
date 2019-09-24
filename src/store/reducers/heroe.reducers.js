@@ -1,10 +1,10 @@
 import {
-  HEROE_RING,
   HEROE_ADD,
-  HEROE_REMOVE,
-  HEROE_UPDATE,
   HEROE_COUNTER,
-  HEROE_EDIT
+  HEROE_EDIT,
+  HEROE_REMOVE,
+  HEROE_RING,
+  HEROE_UPDATE
 } from '../actionTypes';
 
 import { heroes } from '../../services/heroe.services';
