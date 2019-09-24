@@ -1,4 +1,4 @@
-## This branch create a CRUD heroes list using Hooks useState and useContext.
+## This branch create a CRUD heroes list using Redux and hooks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
