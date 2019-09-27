@@ -1,12 +1,12 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import './bootstrap.css';
+import Header from './components/header/Header';
 import store from './store';
 import HeroeDetail from './views/heroe-detail/HeroeDetail';
 import Heroes from './views/heroes/Heroes';
-import Header from './components/header/Header';
 
 const App = () => {
   return (
