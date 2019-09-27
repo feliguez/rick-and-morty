@@ -7,7 +7,8 @@ export const heroes = [
     weapon: 'Bastón 🏑',
     isKill: false,
     useRing: false,
-    editing: false
+    editing: false,
+    avatar: 'https://memegenerator.net/img/images/10989850.jpg'
   },
   {
     id: 2,
@@ -17,7 +18,9 @@ export const heroes = [
     weapon: 'Espada ⚔',
     isKill: false,
     useRing: false,
-    editing: false
+    editing: false,
+    avatar:
+      'https://static.tumblr.com/c3d4e0ca9ff52a4624af578c1fd45ca4/oce6wmt/tBVng6vcv/tumblr_static_evt3oojesxkwoo4gckckcksg4.jpg'
   },
   {
     id: 3,
@@ -27,7 +30,9 @@ export const heroes = [
     weapon: 'Arco 🏹',
     isKill: false,
     useRing: false,
-    editing: false
+    editing: false,
+    avatar:
+      'https://vignette.wikia.nocookie.net/eldragonverde/images/c/c5/Legolas2.png/revision/latest?cb=20121021190948&path-prefix=es'
   },
   {
     id: 4,
@@ -37,7 +42,8 @@ export const heroes = [
     weapon: 'Hacha ⚒',
     isKill: false,
     useRing: false,
-    editing: false
+    editing: false,
+    avatar: 'https://memegenerator.net/img/images/10989850.jpg'
   },
   {
     id: 5,
@@ -47,6 +53,7 @@ export const heroes = [
     weapon: 'Daga 🗡',
     isKill: false,
     useRing: false,
-    editing: false
+    editing: false,
+    avatar: 'https://memegenerator.net/img/images/10989850.jpg'
   }
 ];

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import HeroeControl from '../heroeControl/HeroeControl';
 import Td from '../table/Td';
 import Tr from '../table/Tr';
@@ -78,7 +79,9 @@ const HeroeItem = ({
       ) : (
         <>
           <Td>{heroe.id}</Td>
-          <Td>{heroe.name}</Td>
+          <Td>
+            <Link to={`/heroe-detail/${heroe.id}`}>{heroe.name}</Link>
+          </Td>
           <Td>{heroe.race}</Td>
           <Td>{heroe.age}</Td>
           <Td>{heroe.weapon}</Td>

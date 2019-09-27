@@ -2,7 +2,6 @@ import React from 'react';
 import { connect, batch } from 'react-redux';
 import Form from '../../components/form/Form';
 import HeroesTable from '../../components/heroesTable/HeroesTable';
-import Title from '../../components/title/Title';
 
 import {
   ringHeroe,
@@ -27,23 +26,20 @@ const Heroes = props => {
   } = props;
 
   return (
-    <div className="container heroes">
-      <Title>La Comunidad del Anillo</Title>
-      <div className="heroes--container">
-        {/* <div className="search-input">
+    <>
+      {/* <div className="search-input">
             <input type="text" placeholder="Buscar héroe" />
           </div> */}
-        <Form addHeroe={addHeroe} counter={counter} />
-        <HeroesTable
-          editHeroe={editHeroe}
-          heroes={heroes}
-          isRingUsed={isRingUsed}
-          removeHeroe={removeHeroe}
-          ringHeroe={ringHeroe}
-          updateHeroe={updateHeroe}
-        />
-      </div>
-    </div>
+      <Form addHeroe={addHeroe} counter={counter} />
+      <HeroesTable
+        editHeroe={editHeroe}
+        heroes={heroes}
+        isRingUsed={isRingUsed}
+        removeHeroe={removeHeroe}
+        ringHeroe={ringHeroe}
+        updateHeroe={updateHeroe}
+      />
+    </>
   );
 };
 
