@@ -8,16 +8,19 @@ import {
   removeHeroe,
   addHeroe,
   editHeroe,
-  updateHeroe
+  updateHeroe,
+  filterHeroe
 } from '../../store/actions/heroe.actions';
 
 import './Heroes.css';
+import Search from '../../components/search/Search';
 
 const Heroes = props => {
   const {
     addHeroe,
     counter,
     editHeroe,
+    filterHeroe,
     heroes,
     isRingUsed,
     removeHeroe,
@@ -27,13 +30,11 @@ const Heroes = props => {
 
   return (
     <>
-      {/* <div className="search-input">
-            <input type="text" placeholder="Buscar héroe" />
-          </div> */}
       <Form addHeroe={addHeroe} counter={counter} />
+      <Search filterHeroe={filterHeroe} />
       <HeroesTable
         editHeroe={editHeroe}
-        heroes={heroes}
+        heroes={heroes.filter(hero => hero.show)}
         isRingUsed={isRingUsed}
         removeHeroe={removeHeroe}
         ringHeroe={ringHeroe}
@@ -58,7 +59,8 @@ const mapDispatchToProps = dispatch => {
     },
     removeHeroe: heroes => dispatch(removeHeroe(heroes)),
     editHeroe: heroes => dispatch(editHeroe(heroes)),
-    updateHeroe: heroes => dispatch(updateHeroe(heroes))
+    updateHeroe: heroes => dispatch(updateHeroe(heroes)),
+    filterHeroe: heroes => dispatch(filterHeroe(heroes))
   };
 };
 

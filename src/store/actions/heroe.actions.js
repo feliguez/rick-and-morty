@@ -4,6 +4,7 @@ import {
   HEROE_EDIT,
   HEROE_REMOVE,
   HEROE_RING,
+  HEROE_FILTER,
   HEROE_UPDATE
 } from '../actionTypes';
 
@@ -46,5 +47,12 @@ export const increaseCounter = () => {
   return {
     type: HEROE_COUNTER,
     payload: null
+  };
+};
+
+export const filterHeroe = filter => {
+  return {
+    type: HEROE_FILTER,
+    payload: filter
   };
 };

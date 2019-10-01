@@ -4,6 +4,7 @@ import {
   HEROE_EDIT,
   HEROE_REMOVE,
   HEROE_RING,
+  HEROE_FILTER,
   HEROE_UPDATE
 } from '../actionTypes';
 
@@ -28,10 +29,14 @@ const heroeReducers = (state = initialState, action) => {
         })
       };
     case HEROE_ADD:
+      const newHeroe = {
+        ...action.payload,
+        show: true
+      };
       return {
         ...state,
         counter: state.counter + 1,
-        heroes: state.heroes.concat([action.payload])
+        heroes: state.heroes.concat([newHeroe])
       };
     case HEROE_REMOVE:
       return {
@@ -59,6 +64,18 @@ const heroeReducers = (state = initialState, action) => {
       return {
         ...state,
         counter: state.counter + 1
+      };
+    case HEROE_FILTER:
+      return {
+        ...state,
+        heroes: state.heroes.map(heroe => {
+          const heroeLc = heroe.name.toLowerCase();
+          const filterLc = action.payload.toLowerCase();
+          return {
+            ...heroe,
+            show: heroeLc.includes(filterLc)
+          };
+        })
       };
     default:
       return state;
