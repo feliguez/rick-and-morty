@@ -12,12 +12,20 @@ const Search = ({ filterHeroe }) => {
 
   return (
     <div className="search-input">
-      <input
-        value={heroeName}
-        type="text"
-        placeholder="Buscar héroe"
-        onChange={handleFilterHeroe}
-      />
+      <div className="form-group row  justify-content-center">
+        <div className="col-sm-6">
+          <label htmlFor="name" className="col-form-label">
+            Buscar héroe por nombre
+          </label>
+          <input
+            value={heroeName}
+            type="text"
+            placeholder="Legolas"
+            onChange={handleFilterHeroe}
+            className="form-control"
+          />
+        </div>
+      </div>
     </div>
   );
 };

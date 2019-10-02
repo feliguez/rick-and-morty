@@ -96,7 +96,7 @@ const Form = ({ counter, addHeroe }) => {
         </div>
         <div className="col-sm-2">
           <button
-            className="btn btn-primary button-remove"
+            className="btn btn-primary btn-block button-remove"
             disabled={isDisabled(
               newUser.name,
               newUser.race,
