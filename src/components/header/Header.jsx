@@ -7,7 +7,9 @@ import './Header.css';
 const Header = () => {
   return (
     <header id="header">
-      <Title>La Comunidad del Anillo</Title>
+      <div className="container heroes heroes--container">
+        <Title>Rick and Morty</Title>
+      </div>
     </header>
   );
 };

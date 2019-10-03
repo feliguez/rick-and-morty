@@ -26,10 +26,10 @@ export const characterGetAsyncActionCreator = id => {
     dispatch(startActionCreator());
     getService(id)
       .then(data => {
-        debugger;
         dispatch(successActionCreator(data));
       })
       .catch(err => {
+        debugger;
         dispatch(errorActionCreator(err));
       });
   };

@@ -1,0 +1,56 @@
+.card {
+  color: rgb(255, 152, 0);
+  background: rgb(51, 51, 51);
+}
+
+.card-header {
+  position: relative;
+  padding: 0;
+  background: rgb(32, 35, 41);
+}
+.card-title {
+  background: rgb(32, 35, 41);
+  bottom: 0px;
+  color: white;
+  margin-bottom: 0;
+  opacity: 0.8;
+  padding: 0.625rem;
+  position: absolute;
+  width: 100%;
+}
+.card-title p {
+  margin-bottom: 0;
+}
+
+.list-group-item {
+  background: transparent;
+}
+
+.card-body {
+  text-align: right;
+  opacity: 0.8;
+  a {
+    color: white;
+  }
+}
+
+.character-back {
+  // color: rgb(255, 152, 0);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.custom-list-group-item {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  span {
+    color: rgb(158, 158, 158);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.875em;
+  }
+}
