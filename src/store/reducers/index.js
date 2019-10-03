@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import heroeReducers from './heroe.reducers';
+import characterGetAllReducer from './characterGetAll.reducer';
+import characterGetReducer from './characterGet.reducer';
 
 const reducers = combineReducers({
-  heroes: heroeReducers
+  characterGetAllReducer,
+  characterGetReducer
 });
 
 export default reducers;

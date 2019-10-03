@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { characterGellAllAsyncActionCreator } from '../../store/actions/getAllCharacter.actions';
 import HeroeItem from '../heroeItem/HeroeItem';
 import Table from '../table/Table';
 import Tbody from '../table/Tbody';
@@ -6,16 +8,18 @@ import Th from '../table/Th';
 import Tr from '../table/Tr';
 import './HeroesTable.css';
 
-const HeroesTable = ({
-  editHeroe,
-  heroes,
-  isRingUsed,
-  removeHeroe,
-  ringHeroe,
-  updateHeroe
-}) => {
+const HeroesTable = () => {
+  const dispatch = useDispatch();
+  const characters = useSelector(store => {
+    return store.characterGetAllReducer.data;
+  });
+
+  useEffect(() => {
+    debugger;
+    dispatch(characterGellAllAsyncActionCreator());
+  }, [dispatch]);
   return (
-    <Table isRingUsed={isRingUsed}>
+    <Table>
       <thead className="thead-light">
         <Tr>
           <Th>ID</Th>
@@ -27,17 +31,8 @@ const HeroesTable = ({
         </Tr>
       </thead>
       <Tbody>
-        {heroes.map((heroe, i) => (
-          <HeroeItem
-            editHeroe={editHeroe}
-            heroe={heroe}
-            heroeIndex={i}
-            isRingUsed={isRingUsed}
-            key={i}
-            removeHeroe={removeHeroe}
-            ringHeroe={ringHeroe}
-            updateHeroe={updateHeroe}
-          />
+        {characters.map((heroe, i) => (
+          <HeroeItem heroe={heroe} heroeIndex={i} key={i} />
         ))}
       </Tbody>
     </Table>
