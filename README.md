@@ -1,4 +1,4 @@
-## This branch adds an input search by name.
+## This branch uses Redux, axios async, hooks and Router to show a page with Rick and Morty characters and its details pages.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
