@@ -1,6 +1,6 @@
-## This branch uses Redux, axios async, hooks and Router to show a page with Rick and Morty characters and its details pages.
+## This Project uses Redux, axios async, hooks and Router to show a Rick and Morty's characters page.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Rick and Morty demo](https://rickandmorty-feliguez.netlify.com/)
 
 ## Available Scripts
 
